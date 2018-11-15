@@ -10,32 +10,40 @@ var score = 0;
 
 document.addEventListener("click", mouseClickHandler, false);
 
-function getMousePos(canvas, evt) {
-    var rect = canvas.getBoundingClientRect();
-    return {
-      x: evt.clientX - rect.left,
-      y: evt.clientY - rect.top
-    };
-}
-
 function mouseClickHandler(e) {
-  var pos = getMousePos(canvas, e);
-  var mx = pos.x;
-  var my = pos.y;
+  var element = canvas;
+  var offsetX = 0, offsetY = 0
+
+      if (element.offsetParent) {
+    do {
+      offsetX += element.offsetLeft;
+      offsetY += element.offsetTop;
+    } while ((element = element.offsetParent));
+  }
+
+  var mx = e.pageX - offsetX;
+  var my = e.pageY - offsetY;
+
   if(intersects(mx, my)) {
     if(dx > 0)
       dx++;
     else
       dx--;
     score++;
+  } else if(score > 0){
+    if(dx > 0)
+      dx--;
+    else
+      dx++;
+    score--;
   }
 }
 
 
 
 function intersects(msx, msy) {
-    var disx = msx-x;
-    var disy = msy-y;
+    var disx = msx-(x-20);
+    var disy = msy-(y-20);
     return disx*disx+disy*disy <= ballRadius*ballRadius;
 }
 
