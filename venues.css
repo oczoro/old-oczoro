@@ -50,3 +50,5 @@ ul li a:hover, ul li a:focus {
 	list-style: inline-block;
 	
 }
+
+canvas { background: #eee; }
