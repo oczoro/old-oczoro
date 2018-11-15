@@ -117,11 +117,7 @@ function drawLives() {
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawBricks();
   drawBall();
-  drawPaddle();
-  drawScore();
-  drawLives();
   collisionDetection();
 
   if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
@@ -134,12 +130,6 @@ function draw() {
     if(x > paddleX && x < paddleX + paddleWidth) {
       dy = -dy;
     }
-    else {
-      lives--;
-      if(!lives) {
-        alert("GAME OVER");
-        document.location.reload();
-      }
       else {
         x = canvas.width/2;
         y = canvas.height-30;
