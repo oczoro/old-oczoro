@@ -42,8 +42,8 @@ function mouseClickHandler(e) {
 
 
 function intersects(msx, msy) {
-    var disx = msx-(x-20);
-    var disy = msy-(y-20);
+    var disx = msx-(x);
+    var disy = msy-(y);
     return disx*disx+disy*disy <= ballRadius*ballRadius;
 }
 

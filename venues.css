@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .links {
   text-align: center;
   background-image: url('imgers/oldschoolgifs/rainbowbanner.gif');
@@ -8,7 +12,7 @@
   color: inherit;
 }
 body {
-  background-image: linear-gradient(black, white);
+  background-image: radial-gradient(white, black);
 }
 
 .links > ul > li{
@@ -20,15 +24,18 @@ body {
 }
 
 ul li a:hover, ul li a:focus {
-	color:white;
+  color:white;
+}
+
+.gamecanvas {
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
 canvas { 
+  display: inline;
   background: #FFFFFF;
-  width: 50%;
-  height: 50%; 
   margin-top: 1%;
-  margin-bottom: 41%;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-bottom: 7.5%;
 }
