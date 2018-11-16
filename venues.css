@@ -1,18 +1,17 @@
 body {
   margin: 0;
+  background-image: linear-gradient(black, white);
 }
 
 .links {
   text-align: center;
   background-image: url('imgers/oldschoolgifs/rainbowbanner.gif');
+  background-size: cover;
 }
 
 .links a {
   text-decoration: none;
   color: inherit;
-}
-body {
-  background-image: radial-gradient(white, black);
 }
 
 .links > ul > li{
