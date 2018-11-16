@@ -1,6 +1,6 @@
 body {
   	margin: 0;
-  	background-image: linear-gradient(black, white);
+  	background-image: linear-gradient(white, black);
 }
 
 .links {
@@ -35,6 +35,22 @@ h3:hover {
 	background-color: gray;
 }
 
+/* END OF THE NAV BAR */
+
+.logobox {
+	width: 70%
+	height: 100%;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+.logo {
+	width: 100%;
+	height: 250px;
+	margin: 0;
+	padding: 0;
+}
+
 .img-div {
 	margin: 0;
 	align-content: center;
@@ -42,19 +58,37 @@ h3:hover {
 }
 
 .gerg {
-	border-color: white;
-	border-width: 50px;
+	border-style: solid;
+	border-color: #2e2e2e;
+	border-width: 2px;
 }
+
+
 
 .facts {
 	font-family: Arial, Verdana, sans-serif;
-	color: black;
-	background-color: gray;
-	font-style: bold;
+	color: white;
+	border-style: solid;
+	border-color: #fefefe;
+	border-width: 5px;
+}
+
+.facts:hover {
+	background-image: linear-gradient(black, #333333);
 }
 
 .facts-list {
 	font-size: 20px;
 	display: flex;
 	justify-content: space-evenly;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
 }
