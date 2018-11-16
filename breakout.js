@@ -8,7 +8,7 @@ var y = canvas.height/2;
 
 var score = 0;
 
-document.addEventListener("click", mouseClickHandler, false);
+document.addEventListener("mousedown", mouseClickHandler, false);
 
 function mouseClickHandler(e) {
   var element = canvas;
@@ -23,19 +23,20 @@ function mouseClickHandler(e) {
 
   var mx = e.pageX - offsetX;
   var my = e.pageY - offsetY;
-
-  if(intersects(mx, my)) {
-    if(dx > 0)
-      dx++;
-    else
-      dx--;
-    score++;
-  } else if(score > 0){
-    if(dx > 0)
-      dx--;
-    else
-      dx++;
-    score--;
+  if(!(mx < 0 || mx > canvas.width || my < 0 || my > canvas.height)) {
+    if(intersects(mx, my)) {
+      if(dx > 0)
+        dx++;
+      else
+        dx--;
+      score++;
+    } else if(score > 0){
+      if(dx > 0)
+        dx--;
+      else
+        dx++;
+      score--;
+    }
   }
 }
 
