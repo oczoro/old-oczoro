@@ -1,0 +1,23 @@
+body {
+	background-color: #383838; 
+}
+
+.bg-nav {
+	background-color: #1E1E1E;
+}
+
+.navbar-brand {
+	width: 600px; 
+	margin-left: 20%; 
+	margin-right: 12%;
+}
+
+#navbarSupportedContent a {
+	font-size: 24px;
+	padding: 26px;
+}
+
+.container-websites {
+	text-align: center;
+	margin-top: 50px;
+}
