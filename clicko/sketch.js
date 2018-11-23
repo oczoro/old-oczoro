@@ -13,6 +13,9 @@ var textFade = -20;
 
 var textReset;
 
+var speedInit = 1;
+var speedRate = 1;
+
 function centerCanvas() {
     var x = (windowWidth - cWidth) / 2;
     var y = (windowHeight - cHeight) / 2;
@@ -69,6 +72,7 @@ function mousePressed() {
 }
 
 function draw() {
+    frameRate(100);
     background(0);
     circle.paint();
     circle.update();
@@ -133,12 +137,25 @@ class O {
 
     clicked() {
         if (!(mouseX < 0 || mouseX > cWidth || mouseY < 0 || mouseY > cHeight)) {
-            if (dist(mouseX, mouseY, this.x, this.y) < this.r) {
-                this.dirX += this.dirX > 0 ? 1.0121 : -1.0121;
+            speedRate = Math.pow(Math.E , (.00632 * score)) * .4;
+            if (true) {
+                if(this.dirX > 0) {
+                    this.dirX+=speedRate;
+                }
+                else {
+                    this.dirX+=-speedRate;
+                }
                 score += 1;
+                console.log(score+" "+this.dirX);
             } else if (score > 0) {
-                this.dirX += this.dirX > 0 ? -1.0121 : 1.0121;
+                if(this.dirX < 0) {
+                    this.dirX+=speedRate;
+                }
+                else {
+                    this.dirX+=-speedRate;
+                }
                 score -= 1;
+                console.log(score+" "+this.dirX);
             }
         }
     }
