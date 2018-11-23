@@ -138,7 +138,7 @@ class O {
     clicked() {
         if (!(mouseX < 0 || mouseX > cWidth || mouseY < 0 || mouseY > cHeight)) {
             speedRate = Math.pow(Math.E , (.00632 * score)) * .4;
-            if (true) {
+            if (dist(mouseX, mouseY, this.x, this.y) < this.r) {
                 if(this.dirX > 0) {
                     this.dirX+=speedRate;
                 }
@@ -146,7 +146,6 @@ class O {
                     this.dirX+=-speedRate;
                 }
                 score += 1;
-                console.log(score+" "+this.dirX);
             } else if (score > 0) {
                 if(this.dirX < 0) {
                     this.dirX+=speedRate;
@@ -155,7 +154,6 @@ class O {
                     this.dirX+=-speedRate;
                 }
                 score -= 1;
-                console.log(score+" "+this.dirX);
             }
         }
     }
