@@ -1,5 +1,7 @@
 body {
 	background-color: #383838; 
+	margin: 0;
+	padding: 0;
 }
 
 .bg-nav {
