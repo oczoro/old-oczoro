@@ -1,7 +1,7 @@
 body {
-	background-color: #383838; 
+	background-color: #383838;
 	margin: 0;
-	padding: 0;
+	padding: 0; 
 }
 
 .bg-nav {
@@ -9,7 +9,7 @@ body {
 }
 
 .navbar-brand {
-	width: 600px; 
+	width: 40%; 
 	margin-left: 20%; 
 	margin-right: 12%;
 }
