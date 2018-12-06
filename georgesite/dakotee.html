@@ -1,0 +1,164 @@
+<!-- Dakotas cool thing-->
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+    body {
+      margin: 0;
+    }
+
+    .links {
+      text-align: center;
+      background-image: url('imgers/oldschoolgifs/rainbowbanner.gif');
+      background-size: cover;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .links > ul > li{
+      color: black;
+      font-size: 60px;
+      list-style-type: none;
+      display: inline;
+      padding-right: 3%;
+    }
+
+    ul li a:hover, ul li a:focus {
+      color:white;
+    }
+
+    .contrainer {
+      align-content: middle;
+    }
+
+		#container {
+  		display: grid;
+  		grid-template-areas:
+    	'main main main text'
+    	'main main main text'
+    	'main main main text';
+    	width: 50vw;
+      height:50vh;
+		}
+
+		#container > div {
+      background-color: red;
+ 	    height:301px;
+      width:301px;
+		}
+    #container >div>h1{
+      height:50px;
+      width:250px;
+      
+      padding-top:125px;
+      padding-bottom:125px;
+      padding-left:50px;
+    }
+		.item1{
+			grid-area:main;
+		}
+    .itemText{
+      grid-area:text;
+    }
+  </style>
+</head>
+<body>
+  <div class="links">
+    <ul>
+      <li><a href="index.html" title="Home">Home</a></li>
+      <li><a href="info.html" title="Info">Info</a></li>
+      <li><a href="venues.html" title="Venues">Venues</a></li>
+      <li><a href="dakotee.html" title="Xodio">+</a></li>
+    </ul>
+  </div>
+  <div class="contrainer">
+    <div id="container">
+      <div id=".item1"><img src = "imgers/xodio/topleft.png"></div>
+      <div id=".item1"><img src = "imgers/xodio/topmid.png" "></div>
+      <div id=".item1"><img src = "imgers/xodio/topright.png" ></div>
+      <div id=".itemText"><h1 id="itemText1" style="color:black;font-size:45px">I</h1></div>
+
+      <div id=".item1"><img src = "imgers/xodio/midleft.png" ></div>
+      <div id=".item1"><img src = "imgers/xodio/midmid.png" ></div>
+      <div id=".item1"><img src = "imgers/xodio/midright.png" ></div>
+      <div id=".itemText"><h1 id="itemText2" style="color:black;font-size:45px">SUMMON</h1></div>
+
+      <div id=".item1"><img src = "imgers/xodio/botleft.png" ></div>
+      <div id=".item1"><img src = "imgers/xodio/botmid.png" ></div>
+      <div id=".item1"><img src = "imgers/xodio/botright.png" ></div>
+      <div id=".itemText"><h1 id="itemText3" style="color:black;font-size:45px">LOPEZZZZ</h1></div>
+    </div>
+  </div>
+</body>
+<script>
+    // ********** MAKE YOUR CHANGES HERE
+
+    var text1=document.querySelector('#itemText1');
+    var text2=document.querySelector('#itemText2');
+    var text3=document.querySelector('#itemText3');
+    var divs=document.querySelectorAll('#container > div');
+    var speed=5;
+
+    var hex=new Array("00","14","28","3C","50","64","78","8C","A0","B4","C8","DC","F0")
+    var r=1
+    var g=1
+    var b=1
+    var seq=1
+
+    function changetext(){
+      rainbow="#"+hex[r]+hex[g]+hex[b]
+      rainbow2="#"+hex[b]+hex[r]+hex[g]
+      text1.setAttribute('style', 'color:'+rainbow+";font-size:45px");
+      text2.setAttribute('style', 'color:'+rainbow+";font-size:45px");
+      text3.setAttribute('style', 'color:'+rainbow+";font-size:45px");
+      for(var i = 0; i < divs.length; i++) { 
+        divs[i].setAttribute('style', 'background-color:'+rainbow2+";height:301px;width:301px;");
+      }
+      document.body.style.backgroundColor=rainbow2; 
+    }
+    function change(){
+      if (seq==6){
+        b--
+        if (b==0)
+          seq=1
+      }
+      if (seq==5){
+        r++
+        if (r==12)
+          seq=6
+      }
+      if (seq==4){
+        g--
+        if (g==0)
+          seq=5
+      }
+      if (seq==3){
+        b++
+        if (b==12)
+          seq=4
+      }
+      if (seq==2){
+        r--
+        if (r==0)
+          seq=3
+      }
+      if (seq==1){
+        g++
+        if (g==12)
+          seq=2
+      }
+    changetext()
+    }
+    function starteffect(){
+      if (document.all||document.getElementById) {
+        flash=setInterval("change()",speed)
+      }
+    }
+    starteffect();
+  </script>
+  <iframe style="visibility:hidden;display:none" width="854" height="480" src="https://www.youtube.com/embed/AUvBqQl93Ms?version=3&autoplay=1&loop=1&playlist=oxZ4Q_K67fo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</html>

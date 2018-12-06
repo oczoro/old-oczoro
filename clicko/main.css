@@ -1,0 +1,12 @@
+html, body {
+  height: 100%;
+}
+
+body {
+	background-color: #424242; 
+}
+
+#defaultCanvas0 {
+	margin-right: 50%;
+	border: 3px solid #FFFFFF;
+}

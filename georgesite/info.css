@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  background-image: linear-gradient(white, black);
+}
+
+.links {
+  text-align: center;
+  background-image: url('imgers/oldschoolgifs/rainbowbanner.gif');
+  background-size: cover;
+}
+
+.links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.links > ul > li{
+  color: black;
+  font-size: 60px;
+  list-style-type: none;
+  display: inline;
+  padding-right: 3%;
+}
+
+ul li a:hover, ul li a:focus {
+  color:white;
+}
+
+.retors {
+	display: flex;
+	align-content: auto;
+}

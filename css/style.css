@@ -1,0 +1,193 @@
+* {
+	box-sizing: border-box;
+}
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	position: relative;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #383838;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.main-container {
+	min-height: 100vh;
+	overflow: hidden;
+	display: block;
+	position: relative;
+	padding-bottom: 100px;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #101010;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	min-height: 70px;
+	border-bottom: #E42F2F 5px solid;
+}
+
+header a {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+header li {
+	float: left;
+	display: inline;
+	padding: 0 20px 0px 20px;
+}
+
+header #logo {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+header #logo img {
+	margin: 0;
+	width: 650px;
+	height: auto;
+}
+
+header nav {
+	float: right;
+	margin-top: 10px;
+}
+
+header .current a {
+	color: #E42F2F;
+	font-weight: bold;
+}
+
+header a:hover {
+	color: #EA6161;
+}
+
+#title {
+	min-height: 200px;
+	background-color: #1E1E1E;
+	text-align: center;
+	color: #F5F5F5;
+	border-bottom: #E42F2F 5px solid;
+}
+
+#title h1 {
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 50px;
+}
+
+#boxes {
+	margin-top: 20px;
+}
+
+#boxes .box {
+	float: left;
+	text-align: center;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+	background-color: #1E1E1E;
+	width: 350px;
+	height: 400px;
+	border: #E42F2F 2px solid;
+}
+
+#boxes .box h1 {
+	margin: 0; 
+	color: #FFFFFF;
+}
+
+#boxes .box p {
+	margin-top: 5px;
+	font-size: 18px;
+	color: #E42F2F;
+}
+
+#boxes .box:hover {
+	filter: contrast(70%);
+}
+
+#boxes .link-box {
+	margin: 0;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	padding: 20px 0 0 0;
+	margin-top: 20px;
+	width: 100%;
+	color: white;
+	background-color: #181818;
+	text-align: center;
+}
+
+@media(max-width: 768px) {
+	header #logo,
+	header nav,
+	header nav li,
+	#boxes .box {
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+}
+
+@media(max-width: 833px) {
+	header #logo img {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+}
+
+@media(max-width: 941px) {
+	#boxes .box {
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+}
+
+@media(max-width: 400px) {
+	#boxes .box img{
+		width: 80%;
+	}
+
+	#boxes .box {
+		height: auto;
+	}
+}
+
+@media(max-width: 460px) {
+	#title h1 {
+		font-size: 30px;
+	}
+}
+
+@media(max-width: 271px) {
+	#title h1{
+		font-size: 16px;
+	}
+}
