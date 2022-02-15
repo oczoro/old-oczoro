@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pufferfish</title>
+    <style>
+      .pufferfish {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .pufferfish:hover {
+        cursor: url('carrot.png'), auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="pufferfish" onclick="puffClick()">
+        <img id="puffen" src="puff.png" alt="" width="128" height="128" />
+      </div>
+    </div>
+  </body>
+  <script>
+    var audio = new Audio('pufferfish_eating.m4a');
+    var running = false;
+    async function puffClick() {
+      if (!running) {
+        running = true;
+        var puffimg = document.getElementById('puffen');
+        puffimg.src = 'pufferfish.gif';
+        audio.play();
+        await new Promise((r) => setTimeout(r, 2000));
+        puffimg.src = 'puff.png';
+        running = false;
+      }
+    }
+  </script>
+</html>
